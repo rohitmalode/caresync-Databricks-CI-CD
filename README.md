@@ -1,28 +1,30 @@
 # CareSync Health Network — Metadata-Driven Data Platform on Azure & Databricks
 
-An end-to-end data engineering project for a healthcare network, integrating PostgreSQL and CSV data sources using Azure Data Factory and transforming data through the Bronze, Silver, and Gold layers in Databricks.
+An end-to-end healthcare data engineering project that integrates PostgreSQL and CSV data sources using Azure Data Factory and transforms data through the **Bronze, Silver, and Gold Medallion Architecture** in Databricks.
 
 ## Architecture
 
-![CareSync Azure Data Engineering Architecture](assets/architecture-overview.png)
+![CareSync Architecture](assets/architecture-overview.png)
 
 ## Data Flow
 
-- **Ingestion:** Azure Data Factory with metadata-driven pipelines.
-- **Transformation:** Azure Databricks, PySpark, and Delta Lake using Bronze, Silver, and Gold layers.
+- **Data Sources:** PostgreSQL and CSV files in Azure Blob Storage.
+- **Data Ingestion:** Metadata-driven pipelines using Azure Data Factory (ADF).
+- **Data Transformation:** Azure Databricks, PySpark, and Delta Lake.
 - **Control & Auditing:** Azure SQL Database for metadata, watermarks, and audit logs.
-- **Security:** Azure Key Vault and Unity Catalog.
+- **Governance & Security:** Unity Catalog, Azure Key Vault, and managed identities.
 - **Notifications:** Azure Logic Apps for automated success and failure emails.
-- **CI/CD:** GitHub integration for Azure Data Factory and Databricks.
-- **Analytics:** Databricks AI/BI Dashboards, Genie Agents, and Genie ONE.
+- **CI/CD:** GitHub integration for ADF and Databricks.
+- **Consumption:** Databricks AI/BI Dashboards, Genie Agents, and Genie ONE.
 
 ## Key Features
 
-- Reusable metadata-driven pipelines.
+- Reusable, metadata-driven data pipelines.
 - Full and incremental data loading.
-- Delta Lake transformations and Gold-layer reporting tables.
+- Bronze, Silver, and Gold data processing.
 - Automated audit logging and email notifications.
-- Secure access and GitHub-based CI/CD workflows.
+- Secure data access and GitHub-based CI/CD workflows.
+- Gold-layer reporting tables for analytics.
 
 ## Tech Stack
 
@@ -30,11 +32,11 @@ Azure Data Factory · Azure Data Lake Storage Gen2 · Azure SQL Database · Azur
 
 ## Repositories
 
-- **Azure Data Factory:** https://github.com/rohitmalode/caresync
+- **Azure Data Factory (ADF):** https://github.com/rohitmalode/caresync
 - **Azure Databricks:** https://github.com/rohitmalode/caresync-Databricks-CI-CD
 
 ## Learning & Acknowledgment
 
-This project helped me gain hands-on experience with metadata-driven pipelines, incremental ingestion, PySpark transformations, Medallion Architecture, auditing, secure data access, and CI/CD.
+This project helped me gain hands-on experience with metadata-driven pipelines, incremental ingestion, PySpark transformations, Medallion Architecture, auditing, secure data access, and CI/CD workflows.
 
-**Thanks to [DataBeli](https://github.com/databeli/caresync_azure_project)** for the tutorial and project guidance.
+**Special thanks to [DataBeli](https://github.com/databeli/caresync_azure_project)** for the tutorial, project structure, and guidance throughout this learning journey.
