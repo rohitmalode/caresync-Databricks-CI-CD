@@ -72,6 +72,6 @@ I also explored building analytics dashboards and using Databricks Genie for nat
 
 ## Acknowledgment
 
-**Special thanks to DataBeli for the tutorial, project structure, and guidance that supported my learning and implementation.
+**Special thanks to [DataBeli](https://github.com/databeli/caresync_azure_project)** for the tutorial, project structure, and guidance that supported my learning and implementation.
 
 This project is part of my continued learning journey in Azure Data Engineering and Databricks.
