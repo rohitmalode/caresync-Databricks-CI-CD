@@ -1,21 +1,25 @@
 # CareSync Health Network — Metadata-Driven Data Platform on Azure & Databricks
 
-An end-to-end healthcare data engineering project that integrates PostgreSQL and CSV data sources using Azure Data Factory and transforms data through the **Bronze, Silver, and Gold Medallion Architecture** in Databricks.
+An end-to-end healthcare data engineering project that integrates PostgreSQL and CSV data sources using Azure Data Factory and transforms data through the **Bronze, Silver, and Gold Medallion Architecture** using Azure Databricks.
 
 ## Architecture
 
-![CareSync Architecture](assets/architecture-overview.png)
+![CareSync Architecture](Workflow.png)
 
-## Data Flow
+## Project Overview
 
-- **Data Sources:** PostgreSQL and CSV files in Azure Blob Storage.
+The project automates data ingestion, transformation, monitoring, and reporting using Azure services and Databricks.
+
+### Data Flow
+
+- **Data Sources:** PostgreSQL and CSV files.
 - **Data Ingestion:** Metadata-driven pipelines using Azure Data Factory (ADF).
-- **Data Transformation:** Azure Databricks, PySpark, and Delta Lake.
+- **Data Transformation:** PySpark and Delta Lake with Bronze, Silver, and Gold layers.
 - **Control & Auditing:** Azure SQL Database for metadata, watermarks, and audit logs.
-- **Governance & Security:** Unity Catalog, Azure Key Vault, and managed identities.
+- **Security:** Azure Key Vault, Unity Catalog, and managed identities.
 - **Notifications:** Azure Logic Apps for automated success and failure emails.
-- **CI/CD:** GitHub integration for ADF and Databricks.
-- **Consumption:** Databricks AI/BI Dashboards, Genie Agents, and Genie ONE.
+- **CI/CD:** GitHub integration for Azure Data Factory and Databricks.
+- **Analytics:** Databricks AI/BI Dashboards, Genie Agents, and Genie ONE.
 
 ## Key Features
 
@@ -23,20 +27,51 @@ An end-to-end healthcare data engineering project that integrates PostgreSQL and
 - Full and incremental data loading.
 - Bronze, Silver, and Gold data processing.
 - Automated audit logging and email notifications.
-- Secure data access and GitHub-based CI/CD workflows.
+- Secure data access and credential management.
+- GitHub-based version control and CI/CD workflows.
 - Gold-layer reporting tables for analytics.
 
 ## Tech Stack
 
-Azure Data Factory · Azure Data Lake Storage Gen2 · Azure SQL Database · Azure Databricks · PySpark · Delta Lake · PostgreSQL · Azure Key Vault · Logic Apps · Unity Catalog · GitHub
+- **Cloud:** Microsoft Azure
+- **Orchestration:** Azure Data Factory
+- **Storage:** Azure Data Lake Storage Gen2
+- **Processing:** Azure Databricks, PySpark
+- **Data Format:** Delta Lake
+- **Database:** PostgreSQL, Azure SQL Database
+- **Security:** Azure Key Vault, Unity Catalog
+- **Notifications:** Azure Logic Apps
+- **Version Control & CI/CD:** GitHub
+- **Analytics:** Databricks AI/BI, Genie
 
-## Repositories
+## Repository Structure
 
-- **Azure Data Factory (ADF):** https://github.com/rohitmalode/caresync
-- **Azure Databricks:** https://github.com/rohitmalode/caresync-Databricks-CI-CD
+```text
+caresync-Databricks-CI-CD/
+├── Gold/
+├── README.md
+├── Workflow.png
+├── CareSync Gold Insights.lvdash.json
+├── landing to bronze.ipynb
+└── bronze to silver.ipynb
+```
 
-## Learning & Acknowledgment
+## Related Repositories
 
-This project helped me gain hands-on experience with metadata-driven pipelines, incremental ingestion, PySpark transformations, Medallion Architecture, auditing, secure data access, and CI/CD workflows.
+- **Azure Data Factory (ADF):**  
+  https://github.com/rohitmalode/caresync
 
-**Special thanks to [DataBeli](https://github.com/databeli/caresync_azure_project)** for the tutorial, project structure, and guidance throughout this learning journey.
+- **Azure Databricks:**  
+  https://github.com/rohitmalode/caresync-Databricks-CI-CD
+
+## What I Learned
+
+Through this project, I gained hands-on experience with metadata-driven pipelines, incremental data ingestion, PySpark transformations, Delta Lake, Medallion Architecture, audit logging, error handling, secure data access, and CI/CD workflows.
+
+I also explored building analytics dashboards and using Databricks Genie for natural-language data analysis.
+
+## Acknowledgment
+
+**Special thanks to DataBeli for the tutorial, project structure, and guidance that supported my learning and implementation.
+
+This project is part of my continued learning journey in Azure Data Engineering and Databricks.
